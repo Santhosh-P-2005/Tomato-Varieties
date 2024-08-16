@@ -1,11 +1,18 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View,Image } from 'react-native';
 
 const ArkaSaurabh = () => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.section}>
         <Text style={styles.title}>Arka Saurabh</Text>
+      </View>
+      <View style={styles.imageContainer}>
+        <Image
+          source={{ uri: './photos/Arka Saurabh.png' }}
+          style={styles.image}
+        />
+        <Text style={styles.imageCaption}>Arka Saurabh</Text>
       </View>
 
       <View style={styles.section}>
@@ -62,6 +69,21 @@ const styles = StyleSheet.create({
   },
   section: {
     marginBottom: 20,
+  },
+  imageContainer: {
+    alignItems: 'center',
+    margin: 10,
+  },
+  image: {
+    width: 200,
+    height: 200,
+    resizeMode: 'cover',
+    borderRadius: 10,
+  },
+  imageCaption: {
+    marginTop: 10,
+    fontSize: 16,
+    color: '#333',
   },
   title: {
     fontSize: 24,
